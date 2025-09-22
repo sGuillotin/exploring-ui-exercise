@@ -7,6 +7,8 @@
         public MainPage()
         {
             InitializeComponent();
+
+            // BirdPicker.ItemSource
         }
 
         private void OnCounterClicked(object? sender, EventArgs e)
