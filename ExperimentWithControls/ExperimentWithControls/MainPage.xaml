@@ -30,6 +30,54 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+
+            <!-- Text enterer -->
+            <Entry
+                Placeholder="Type your text here"
+                SemanticProperties.Hint="Lets you enter text"
+                TextChanged="Entry_TextChanged"/>
+            
+            <Label
+                Text="Here's what you typed:"
+                SemanticProperties.Hint="Here's what you typed:"/>
+            
+            <Label
+                x:Name="EnteredText"
+                SemanticProperties.Description="The text that you have entered"
+                BackgroundColor="BurlyWood" Margin="0,0,0,20"/>
+
+
+            <!-- Stepper (-/+) -->
+            <Stepper Minimum="0" Maximum="10" Increment="1"
+                SemanticProperties.Description="Increase stepper value using hyphen or plus buttons"
+                ValueChanged="Stepper_ValueChanged"/>
+                <!-- ^^^ this is the event handler!! -->
+
+            <Label
+                Text="Here's the stepper value:" 
+                SemanticProperties.Description="Here's the stepper value"/>
+
+            <Label 
+                x:Name="StepperValue" 
+                SemanticProperties.Description="The value of the stepper, number chosen by the user"
+                BackgroundColor="LightBlue" Margin="0,0,0,20" />
+
+
+            <!-- Slider -->
+            <Slider Minimum="0" Maximum="1"
+                ValueChanged="Slider_ValueChanged"/>                <!-- no semantic desc for slider?? -->
+
+            <Label
+                Text="Here's the slider value:"
+                SemanticProperties.Description="Herer's the slider value"/>
+            <!-- fix typo TODO-->
+
+            <Label 
+                x:Name="SliderValue"
+                SemanticProperties.Description="The value of the slider is"
+                BackgroundColor="LightBlue" Margin="0,0,0,20"/>
+
+             
         </VerticalStackLayout>
     </ScrollView>
 
