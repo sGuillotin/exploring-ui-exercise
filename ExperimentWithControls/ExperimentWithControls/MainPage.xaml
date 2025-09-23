@@ -65,19 +65,48 @@
 
             <!-- Slider -->
             <Slider Minimum="0" Maximum="1"
-                ValueChanged="Slider_ValueChanged"/>                <!-- no semantic desc for slider?? -->
+                ValueChanged="Slider_ValueChanged"/>
+			<!-- no semantic desc for slider?? -->
 
             <Label
                 Text="Here's the slider value:"
-                SemanticProperties.Description="Herer's the slider value"/>
-            <!-- fix typo TODO-->
+                SemanticProperties.Description="Here's the slider value"/>
 
             <Label 
                 x:Name="SliderValue"
                 SemanticProperties.Description="The value of the slider is"
                 BackgroundColor="LightBlue" Margin="0,0,0,20"/>
 
-             
+			<!-- Picker -->
+			<HorizontalStackLayout Spacing="20">
+
+				<VerticalStackLayout>
+					<Label Text="Pick a bird"
+                            SemanticProperties.Description="Picks a bird"/>
+					<Picker x:Name="BirdPicker"/>
+				</VerticalStackLayout>
+
+				<VerticalStackLayout>
+
+					<Label Text="Some birds"
+                           SemanticProperties.Description="A list of birds"/>
+
+					<Label x:Name="Birds"
+                           Padding="10"
+                            MinimumWidthRequest="150"
+                           TextColor="White"
+                            BackgroundColor="DarkBlue"
+                           SemanticProperties.Description="Shows the added birds"/>
+
+				</VerticalStackLayout>
+
+			</HorizontalStackLayout>
+
+			<Button x:Name="AddBird"
+                    Text="Add a bird"
+                    Margin="0,0,0,20"
+                    SemanticProperties.Hint="Adds a bird"
+                    Clicked="AddBird_Clicked"/>
         </VerticalStackLayout>
     </ScrollView>
 
